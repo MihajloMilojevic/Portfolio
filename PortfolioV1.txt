@@ -1,0 +1,35 @@
+PORTFOLIO - MIHAJLO MILOJEVIĆ
+
+- Svaki prozor u naslovnoj liniji ima ikonicu, ime, dugmiće za zatvaranje, prikaz preko celog ekrana i smanjivanje
+- "Instalirane" aplikacije treba da budu moji projekti
+-  Desnim klikom (držanjem na mobilnim uređajima) na aplikaciju se otvara prozor sa opcijama: 
+          -> Run - za pokretanje aplikacije
+          -> Code - otvara GitHub repo 
+          -> Properties - opis (General) i priča o nastanku (Details, opcionalno)
+          -> Delete - za sklanjanje ikonice sa radne površine
+          -> ...
+- Hover-om preko ikonice pojavljuje se tooltip sa kratkim opisom
+- Pri pokretanju aplikacije prvo se pojavljuje opis kao i dva dugmeta, za pokretanje i otvaranje u novom prozoru
+- Kada se pokrene stranica projekta u naslovnoj liniji se pojavljuje dugme za čitanje opisa i dugme za otvaranje u novom tab-u
+- Ikonica mog logo-a sa nazivom Ja (Me) za informacije o meni
+- Program se sastoji iz više tabova/prikaza/sekcija (General, Skills, )
+- Otvorene aplikacije i programi se prikazuju u taskbar-u
+- Ukoliko aplikacija ima više nego što može da stane u taskbar taskbar se može proširiti na kratko da se prikažu sve otvorene aplikacije
+- Ikonice su smeštene u grid
+- Ako ne mogu sve ikonice da stanu na jedan ekran, prelaze na drugi između kojih korisnik može da prelazi prevlačenjem u stranu
+- Postoji i custom file menager koji bi sadržao nekoliko foldera
+- Jedan folder bi bio za moju omiljenu muziku
+- Korisnik bi mogao da pušta muziku u custom media player-u
+- Korisnik bi mogao da doda i svoje pesme putem url-a
+- Jedan folder bi bio za projekte gde bi se nalazila lista projekata koji su na desktopu sa istim mogućnostima na desni klik (hold)
+- Svaka greška na sajtu bi se manifestovala kao popup prozor za grešku sa zvukom greške
+- U podešavanjima korisnik bi mogao da podešava veličinu fonta, pozadinu, boju slova...
+- Korsnik može da prevlači ikonice i prozore po desktopu i ostavlja ih gde hoće (drag and drop)
+- Napraviti folder sa igricama koje bi korisnik mogao da igra
+- Sve promene koje korisnik napravi se čuvaju u localStorage-u
+- Pri učitavanju sajta sve se uzima iz localStorage-a
+- Jezik bi mogao da bude engleski
+
+- Da li je react dobar za kreiranje ove aplikcije???
+- Prozori ne treba da se rerenderuju na svaki pokret ni na dodavanje aplikacije u taskbar...
+- Možda react-native web???
