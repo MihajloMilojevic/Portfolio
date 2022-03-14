@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import Window from "./components/window";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Window width={"50vh"} height={"15vh"}>
+        <p>Hello</p>
+      </Window>
+      <Window width={"400px"} height={"300px"}>
+        <iframe src="https://www.youtube.com/embed/uXWycyeTeCs" ></iframe>
+      </Window>
     </div>
   );
 }

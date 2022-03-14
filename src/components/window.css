@@ -1,0 +1,9 @@
+.window {
+    border: 1px solid black;
+    background-color: lime;
+    width: max-content;
+}
+.title-bar {
+    border: 1px solid red;
+    background-color: aqua;
+}
