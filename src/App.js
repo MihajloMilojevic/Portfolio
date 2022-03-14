@@ -1,15 +1,19 @@
 import Window from "./components/window";
+import TitleBar from "./components/titleBar";
 
 function App() {
   return (
-    <div>
-      <Window width={"50vh"} height={"15vh"}>
+    <>
+      <Window width={{value: 50, unit: "vh"}} height={{value: 15, unit: "vh"}}
+      titleBar={<TitleBar/>}>
         <p>Hello</p>
       </Window>
-      <Window width={"400px"} height={"300px"}>
-        <iframe src="https://www.youtube.com/embed/uXWycyeTeCs" ></iframe>
+      <Window width={{value: 400, unit: "px"}} height={{value: 300, unit: "px"}}
+        titleBar={<TitleBar/>}
+      >
+        <iframe title="yt" src="https://express-bus-booking.netlify.app/" style={{width: "100%", height: "100%"}}></iframe>
       </Window>
-    </div>
+    </>
   );
 }
 
