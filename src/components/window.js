@@ -6,23 +6,35 @@ import TitleBar from "./titleBar";
 
 import "./window.css"
 
-export default function Window({children, width, height, titleBar, show}) {
-    const [dimensions, setDimension] = useState({ width: width.value, height: height.value, max: false })
+export default function Window({children, width, height, show}) {
     const {width: windowWidth, height: windowHeight} = useWindowDimensions();
+    const [dimensions, setDimension] = useState({ width: width.value, height: height.value, max: false })
     const [visible, setVisible] = useState(show);
+
+    const middlePosition = {
+        x: windowWidth / 2 - dimensions.width / 2,
+        y: windowHeight / 2 - dimensions.height / 2
+    }
+
+    const [position, setPosition] = useState({x: middlePosition.x, y: middlePosition.y})
     const minimaze = () => {
         setVisible(false)
     }
     const maximaze = () => {
-        if(dimensions.max)
+        if(dimensions.max) {
             calculateDimensions(width, height, false)
-        else
+            setPosition({x: 0, y: 0})
+        }
+        else {
             calculateDimensions(
                 { value: 100,unit: "vw"},
                 { value: 100,unit: "vh"},
                 true
             )
+            setPosition({x: middlePosition.x, y: middlePosition.y});
+        }
     }
+
     const close = () => {
         setVisible(false)        
     }
@@ -73,6 +85,7 @@ export default function Window({children, width, height, titleBar, show}) {
     }, [width, height, windowWidth, windowHeight])
 
     const onDragStart = (e) => {
+        
         let elems = document.getElementsByClassName('react-draggable');
         for(let i = 0; i < elems.length; i++) {
           elems[i].style.zIndex = 1;
@@ -87,6 +100,7 @@ export default function Window({children, width, height, titleBar, show}) {
                 <Draggable
                 handle=".title-bar"
                 onMouseDown={onDragStart}
+                position={position}
                 >
                     <ResizableBox
                         className="resizable-box window"
